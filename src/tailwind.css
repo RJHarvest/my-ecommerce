@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #007799;
+    --color-secondary: #009977;
+    --color-accent: #007799;
+    --color-background: #f0f0f0;
+    --color-text: #333333;
+    --color-border: #e0e0e0;
+    --color-shadow: #0000001a;
+    --color-white: #ffffff;
+    --color-black: #000000;
+  }
+  body {
+    @apply m-0 font-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  code {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  
+}
+
+@layer utilities {
+  
+}

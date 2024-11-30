@@ -1,22 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  body {
-    @apply m-0 font-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  code {
-    @apply font-mono;
-  }
+:root {
+  --color-primary: #007799;
+  --color-secondary: #009977;
+  --color-accent: #007799;
+  --color-background: #f0f0f0;
+  --color-text: #333333;
+  --color-border: #e0e0e0;
+  --color-shadow: #0000001a;
+  --color-white: #ffffff;
+  --color-black: #000000;
 }
 
-@layer components {
-  
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
-@layer utilities {
-  
+.button-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
 }
+
+.navbar {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+

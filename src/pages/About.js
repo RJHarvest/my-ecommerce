@@ -56,7 +56,7 @@ function About() {
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-primary mb-4">About Us</h1>
-        <p className="text-text max-w-2xl mx-auto">
+        <p className="text-muted max-w-2xl mx-auto">
           We're on a mission to revolutionize online shopping by providing high-quality products
           and exceptional customer service.
         </p>
@@ -66,12 +66,12 @@ function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
         <div className="space-y-4">
           <h2 className="text-3xl font-bold text-primary">Our Story</h2>
-          <p className="text-text">
+          <p className="text-muted">
             Founded in 2020, we started with a simple idea: make online shopping better.
             We believed that customers deserved more than just products – they deserved
             an experience.
           </p>
-          <p className="text-text">
+          <p className="text-muted">
             Today, we serve thousands of customers worldwide, offering a curated selection
             of premium products and a shopping experience that puts the customer first.
           </p>
@@ -92,13 +92,13 @@ function About() {
           {companyValues.map((value, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-sm border-t-2 border-accent text-center"
+              className="bg-white p-6 rounded-lg shadow-md border-t-2 border-secondary text-center"
             >
-              <div className="text-secondary mb-4 flex justify-center">
+              <div className="text-accent mb-4 flex justify-center">
                 {value.icon}
               </div>
-              <h3 className="text-xl font-semibold text-secondary mb-2">{value.title}</h3>
-              <p className="text-text">{value.description}</p>
+              <h3 className="text-xl font-semibold text-text mb-2">{value.title}</h3>
+              <p className="text-muted">{value.description}</p>
             </div>
           ))}
         </div>
@@ -111,7 +111,7 @@ function About() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
+              className="bg-white rounded-lg border border-border overflow-hidden hover:shadow-md transition-shadow duration-300"
             >
               <img
                 src={member.image}
@@ -119,9 +119,9 @@ function About() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-4">
-                <h3 className="text-xl font-semibold text-secondary">{member.name}</h3>
+                <h3 className="text-xl font-semibold text-text">{member.name}</h3>
                 <p className="text-accent mb-2">{member.role}</p>
-                <p className="text-text text-sm">{member.bio}</p>
+                <p className="text-muted text-sm">{member.bio}</p>
               </div>
             </div>
           ))}

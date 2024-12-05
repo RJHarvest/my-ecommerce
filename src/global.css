@@ -1,27 +1,13 @@
 :root {
-  --color-primary: #007799;
-  --color-secondary: #009977;
-  --color-accent: #007799;
-  --color-background: #f0f0f0;
-  --color-text: #333333;
+  --color-primary: #2c2d2c;
+  --color-secondary: #5d301c;
+  --color-accent: #e55b1c;
+
+  --color-background: #e2e6e6;
+  --color-text: #1e1e1d;
+  --color-muted: #5e5e5e;
   --color-border: #e0e0e0;
   --color-shadow: #0000001a;
-  --color-white: #ffffff;
+  --color-white: #fefefe;
   --color-black: #000000;
 }
-
-.button-primary {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-.button-secondary {
-  background-color: var(--color-secondary);
-  color: var(--color-white);
-}
-
-.navbar {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { BASE_ROUTE } from '../../lib/const';
 import "./index.css";
 
 function Home() {
@@ -62,6 +63,12 @@ function Home() {
     }
   ];
 
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    alert("Newsletter submitted");
+    console.log("Newsletter submitted");
+  };
+
   return (
     <div className="home-container">
       {/* Hero Section */}
@@ -71,7 +78,7 @@ function Home() {
           <div className="hero-text">
             <h1>New Season Arrivals</h1>
             <p>Check out all the new trends and styles for 2024</p>
-            <Link to="/products" className="hero-button">
+            <Link to={`/${BASE_ROUTE}/products`} className="hero-button">
               Shop Now
             </Link>
           </div>
@@ -81,7 +88,7 @@ function Home() {
       {/* Featured Products Section */}
       <section className="featured-section">
         <div className="section-container">
-          <h2 className="section-title">Featured Products</h2>
+          <h2 className="featured-title">Featured Products</h2>
           <div className="products-grid">
             {featuredProducts.map((product) => (
               <div key={product.id} className="product-card">
@@ -159,7 +166,7 @@ function Home() {
           <p className="newsletter-text">
             Subscribe to our newsletter and get exclusive offers, new product alerts, and insider-only discounts.
           </p>
-          <form className="newsletter-form">
+          <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
             <input
               type="email"
               placeholder="Enter your email"

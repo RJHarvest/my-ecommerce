@@ -13,6 +13,7 @@ module.exports = {
         shadow: "var(--color-shadow)",
         background: "var(--color-background)",
         text: "var(--color-text)",
+        muted: "var(--color-muted)",
       }
     },
   },

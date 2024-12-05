@@ -25,11 +25,11 @@ function Contact() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-secondary mb-8">Contact Us</h1>
+      <h1 className="text-3xl font-bold text-primary mb-8">Contact Us</h1>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Form */}
-        <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-secondary">
+        <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-secondary">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-text mb-2">
@@ -97,7 +97,7 @@ function Contact() {
 
             <button
               type="submit"
-              className="w-full bg-secondary text-white py-3 rounded hover:bg-opacity-90 transition-opacity duration-300"
+              className="w-full bg-primary text-white py-3 rounded hover:bg-opacity-90 transition-opacity duration-300"
             >
               Send Message
             </button>
@@ -115,9 +115,9 @@ function Contact() {
           </div>
 
           {/* Contact Details */}
-          <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-accent">
+          <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-secondary">
             <div>
-              <h3 className="text-lg font-semibold text-secondary mb-2">Address</h3>
+              <h3 className="text-lg font-semibold text-primary mb-2">Address</h3>
               <p className="text-text">
                 123 Store Street<br />
                 City, State 12345<br />
@@ -126,17 +126,17 @@ function Contact() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-secondary mb-2">Contact Info</h3>
+              <h3 className="text-lg font-semibold text-primary mb-2">Contact Info</h3>
               <div className="space-y-2">
                 <p className="text-text">
                   <span className="font-medium">Email:</span>{' '}
-                  <a href="mailto:contact@example.com" className="text-accent hover:text-secondary">
+                  <a href="mailto:contact@example.com" className="text-accent hover:opacity-85">
                     contact@example.com
                   </a>
                 </p>
                 <p className="text-text">
                   <span className="font-medium">Phone:</span>{' '}
-                  <a href="tel:+1234567890" className="text-accent hover:text-secondary">
+                  <a href="tel:+1234567890" className="text-accent hover:opacity-85">
                     (852) 9123 4567
                   </a>
                 </p>
@@ -144,7 +144,7 @@ function Contact() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-secondary mb-2">Business Hours</h3>
+              <h3 className="text-lg font-semibold text-primary mb-2">Business Hours</h3>
               <div className="space-y-1">
                 <p className="text-text">Monday - Friday: 9:00 AM - 6:00 PM</p>
                 <p className="text-text">Saturday: 10:00 AM - 4:00 PM</p>

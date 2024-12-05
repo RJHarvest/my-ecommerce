@@ -64,7 +64,7 @@ function Products() {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="px-4 py-2 border border-border rounded focus:outline-none focus:border-accent"
+            className="px-4 py-2 border border-border rounded focus:outline-none focus:border-primary"
           >
             <option value="featured">Featured</option>
             <option value="price-low">Price: Low to High</option>
@@ -78,8 +78,8 @@ function Products() {
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Filters Sidebar */}
         <div className="lg:col-span-1">
-          <div className="bg-white p-6 rounded-lg shadow-sm border-t-2 border-accent">
-            <h2 className="text-xl font-semibold text-secondary mb-4">Filters</h2>
+          <div className="bg-white p-6 rounded-lg shadow-md border-t-2 border-secondary">
+            <h2 className="text-xl font-semibold text-primary mb-4">Filters</h2>
             
             {/* Price Range Filter */}
             <div className="mb-6">
@@ -121,7 +121,7 @@ function Products() {
         <div className="lg:col-span-3">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
-              <div key={product.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 border border-border hover:border-accent">
+              <div key={product.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 border border-border hover:border-secondary">
                 <Link to={`/product/${product.id}`}>
                   <img
                     src={product.image}
@@ -129,12 +129,12 @@ function Products() {
                     className="w-full h-48 object-cover"
                   />
                   <div className="p-4">
-                    <span className="text-sm text-secondary">{product.category}</span>
+                    <span className="text-sm text-muted">{product.category}</span>
                     <h3 className="text-lg font-semibold text-text mt-1">{product.name}</h3>
                     <div className="flex items-center mt-2">
                       <span className="text-accent font-bold">${product.price}</span>
                       <div className="ml-auto flex items-center">
-                        <span className="text-secondary">★</span>
+                        <span className="text-yellow-500">★</span>
                         <span className="ml-1 text-sm text-text">{product.rating}</span>
                         <span className="ml-1 text-sm text-text">({product.reviews})</span>
                       </div>

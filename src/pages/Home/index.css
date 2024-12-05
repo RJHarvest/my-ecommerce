@@ -57,7 +57,7 @@
 
 .hero-button {
   display: inline-block;
-  background-color: var(--color-secondary);
+  background-color: var(--color-accent);
   color: white;
   padding: 0.75rem 2rem;
   border-radius: 0.375rem;
@@ -71,7 +71,14 @@
 /* Featured Products Section */
 .featured-section {
   padding: 4rem 0;
-  background-color: var(--color-background);
+  background-color: var(--color-secondary);
+}
+
+.featured-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 2rem;
 }
 
 .products-grid {
@@ -81,7 +88,7 @@
 }
 
 .product-card {
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -105,7 +112,7 @@
 
 .product-category {
   font-size: 0.875rem;
-  color: var(--color-primary);
+  color: var(--color-muted);
 }
 
 .product-name {
@@ -193,7 +200,7 @@
 }
 
 .promo-text {
-  color: white;
+  color: var(--color-white);
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -211,8 +218,8 @@
 
 .promo-button {
   display: inline-block;
-  background-color: white;
-  color: var(--color-accent);
+  background-color: var(--color-white);
+  color: var(--color-text);
   padding: 0.75rem 2rem;
   border-radius: 0.375rem;
   transition: opacity 0.3s;
@@ -235,12 +242,12 @@
 /* Newsletter Section */
 .newsletter-section {
   padding: 4rem 0;
-  background-color: var(--color-white);
+  background-color: var(--color-background);
   text-align: center;
 }
 
 .newsletter-text {
-  color: var(--color-text);
+  color: var(--color-black);
   margin-bottom: 2rem;
   max-width: 42rem;
   margin-left: auto;
@@ -267,7 +274,7 @@
 }
 
 .newsletter-button {
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 0.375rem;

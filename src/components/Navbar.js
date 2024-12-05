@@ -1,29 +1,41 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { BASE_ROUTE } from '../lib/const';
 
 function Navbar() {
+  const location = useLocation();
+  
+  const menuItems = [
+    { label: 'Home', path: `/${BASE_ROUTE}` },
+    { label: 'Products', path: `/${BASE_ROUTE}/products` },
+    { label: 'About', path: `/${BASE_ROUTE}/about` },
+    { label: 'Contact', path: `/${BASE_ROUTE}/contact` },
+  ];
+
   return (
     <nav className="bg-background shadow-md sticky top-0 z-50 border-b-2 border-secondary/10">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-bold text-primary">
+            <Link to={`/${BASE_ROUTE}`} className="text-xl font-bold text-primary">
               Your Logo
             </Link>
           </div>
           
           <div className="flex items-center space-x-4">
-            <Link to="/" className="text-text hover:text-accent transition-colors duration-300">
-              Home
-            </Link>
-            <Link to="/products" className="text-text hover:text-accent transition-colors duration-300">
-              Products
-            </Link>
-            <Link to="/about" className="text-text hover:text-accent transition-colors duration-300">
-              About
-            </Link>
-            <Link to="/contact" className="text-text hover:text-accent transition-colors duration-300">
-              Contact
-            </Link>
+            {menuItems.map((item) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link 
+                  key={item.path} 
+                  to={item.path} 
+                  className={`transition-colors duration-300 ${
+                    isActive ? 'text-accent font-medium' : 'text-text hover:text-accent'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -31,4 +43,4 @@ function Navbar() {
   );
 }
 
-export default Navbar; 
+export default Navbar;

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BASE_ROUTE } from '../lib/const';
 
 function Products() {
   const [sortBy, setSortBy] = useState('featured');
@@ -122,7 +123,7 @@ function Products() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
               <div key={product.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 border border-border hover:border-secondary">
-                <Link to={`/product/${product.id}`}>
+                <Link to={`/${BASE_ROUTE}/product/${product.id}`} className="block">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -139,7 +140,14 @@ function Products() {
                         <span className="ml-1 text-sm text-text">({product.reviews})</span>
                       </div>
                     </div>
-                    <button className="w-full bg-primary text-white py-2 rounded mt-4 hover:bg-accent transition-colors duration-300">
+                    <button
+                      className="w-full bg-primary text-white py-2 rounded mt-4 hover:bg-accent transition-colors duration-300"
+                      onClick={(e) => {
+                        e.preventDefault(); // Prevent navigation
+                        // Add to cart logic here
+                        alert('Added to cart');
+                      }}
+                    >
                       Add to Cart
                     </button>
                   </div>

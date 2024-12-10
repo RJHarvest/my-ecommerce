@@ -1,6 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { BASE_ROUTE } from './lib/const';
+import './global.css';
+
 import Home from './pages/Home';
 import Products from './pages/Products';
 import About from './pages/About';
@@ -10,8 +14,7 @@ import ShippingPolicy from './pages/ShippingPolicy';
 import Returns from './pages/Returns';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
-import { BASE_ROUTE } from './lib/const';
-import './global.css';
+import ProductLanding from './pages/ProductLanding';
 
 function App() {
   return (
@@ -29,6 +32,7 @@ function App() {
             <Route path={`/${BASE_ROUTE}/returns`} element={<Returns />} />
             <Route path={`/${BASE_ROUTE}/privacy`} element={<Privacy />} />
             <Route path={`/${BASE_ROUTE}/terms`} element={<Terms />} />
+            <Route path={`/${BASE_ROUTE}/product/:id`} element={<ProductLanding />} />
           </Routes>
         </main>
         <Footer />

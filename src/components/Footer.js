@@ -125,7 +125,7 @@ function Footer() {
               <img
                 src={paymentPaypal}
                 alt="PayPal"
-                className="h-8"
+                className="mt-1 h-6"
               />
             </div>
           </div>

@@ -39,7 +39,7 @@ Follow the instructions below to deploy your own version of the e-commerce websi
 
 1. First rename the **homepage** value in your package.json file.
 
-```json
+```js
 // package.json
 
 {
